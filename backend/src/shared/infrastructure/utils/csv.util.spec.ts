@@ -21,8 +21,8 @@ describe('csv.util', () => {
     it('parses semicolon-separated employee rows', async () => {
       const content = [
         'name;email;employeeCode;department;position;isActive',
-        'ĐỖ THỊ CẨM TÚ;do-t@dymvietnam.jp;BPO-0001;HR-GA;2;TRUE',
-        'LÊ QUANG VINH;le-v@dymvietnam.jp;BPO-0002;;2;TRUE',
+        'ĐỖ THỊ CẨM TÚ;do-t@example.com;BPO-0001;HR-GA;2;TRUE',
+        'LÊ QUANG VINH;le-v@example.com;BPO-0002;;2;TRUE',
       ].join('\n');
 
       const rows = await parseCsvBuffer(Buffer.from(content, 'utf8'));
@@ -30,14 +30,14 @@ describe('csv.util', () => {
       expect(rows).toHaveLength(2);
       expect(rows[0]).toMatchObject({
         name: 'ĐỖ THỊ CẨM TÚ',
-        email: 'do-t@dymvietnam.jp',
+        email: 'do-t@example.com',
         employeeCode: 'BPO-0001',
         department: 'HR-GA',
         position: '2',
         isActive: 'TRUE',
       });
       expect(rows[1].department).toBe('');
-      expect(getCsvValue(rows[1], ['email'])).toBe('le-v@dymvietnam.jp');
+      expect(getCsvValue(rows[1], ['email'])).toBe('le-v@example.com');
     });
 
     it('still parses comma-separated rows', async () => {

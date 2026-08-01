@@ -677,7 +677,7 @@ JWT_EXPIRES_IN=15m
 JWT_REFRESH_EXPIRES_IN=7d
 SUPERADMIN_EMAIL=admin@example.com
 SUPERADMIN_PASSWORD=initial-password
-MONGODB_URI=mongodb://localhost:27017/system-orchestration
+MONGODB_URI=mongodb://localhost:27017/erp-platform
 ```
 
 ---

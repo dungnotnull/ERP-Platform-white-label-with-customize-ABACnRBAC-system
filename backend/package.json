@@ -1,7 +1,7 @@
 {
-  "name": "system-orchestration-mono-src",
+  "name": "erp-platform",
   "version": "0.0.1",
-  "description": "DYM Management Monorepo - Unified NestJS application with DDD/hexagonal architecture",
+  "description": "ERP Platform - Unified NestJS application with DDD/hexagonal architecture",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

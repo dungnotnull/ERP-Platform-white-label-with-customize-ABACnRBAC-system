@@ -1,6 +1,6 @@
 import { Permission } from "@/shared/@types/permission.type.ts";
 
-/** Compatible with legacy @dym-vietnam/internal-shared User */
+/** Compatible with legacy legacy internal-shared User */
 export interface User {
   _id: string;
   name: string;

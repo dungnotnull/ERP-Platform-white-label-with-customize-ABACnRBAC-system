@@ -1,7 +1,7 @@
 {
   "footer": {
-    "copyright": "DYM VietNam {{year}}",
-    "createdBy": "Được tạo bởi IT DYM VietNam"
+    "copyright": "ERP Platform {{year}}",
+    "createdBy": "Được tạo bởi IT Team"
   },
   "common": {
     "handling": "Đang xử lý...",
@@ -65,9 +65,9 @@
     "today": "Hôm nay",
     "successTotal": "Tổng thành công",
     "skipped": "Bị bỏ qua",
-    "CTYTNHH DYM VIETNAM": "CÔNG TY TNHH DYM VIETNAM",
-    "DYMVN/BBBGTS": "Số: ...-DYMVN/BBBGTS",
-    "DYMVN/BBTHTS": "Số: ...-DYMVN/BBHTTS",
+    "YOUR COMPANY LLC": "YOUR COMPANY LLC",
+    "ERP/BBBGTS": "Số: ...-ERP/BBBGTS",
+    "ERP/BBTHTS": "Số: ...-ERP/BBHTTS",
     "CHXHCN VIET NAM": "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM",
     "doclap": "Độc lập - Tự do - Hạnh phúc",
     "tphcmngay": "TP Hồ Chí Minh, ngày ..... tháng ..... năm ..........",
@@ -76,14 +76,14 @@
     "mr/mss": "Ông/Bà",
     "department": "Bộ phận",
     "position": "Chức danh",
-    "handoverIntro": "Bên Giao đã tiến hành bàn giao tài sản cho bên Nhận tại văn phòng công ty DYM Việt Nam theo bảng thống kê chi tiết sau:",
+    "handoverIntro": "Bên Giao đã tiến hành bàn giao tài sản cho bên Nhận tại văn phòng công ty theo bảng thống kê chi tiết sau:",
     "handoverCommitment": "Bên Giao cam đoan rằng toàn bộ tài sản đã được bàn giao đầy đủ, đúng số lượng, chất lượng. Kể từ ngày .../.../..... số tài sản trên sẽ do bên Nhận chịu trách nhiệm quản lý.",
     "fieldPlaceholder": "...",
     "nameLinePlaceholder": "....................",
     "departmentPlaceholder": "..",
     "returnCommitment": "Bên giao cam đoan rằng toàn bộ tài sản đã được hoàn trả đầy đủ, đúng số lượng, chất lượng. Kể từ ngày .../.../..... số tài sản trên sẽ do bên nhận chịu trách nhiệm quản lý.",
     "commitmentCopies": "Biên bản được lập thành 02 bản, mỗi bên giữ một bản.",
-    "returnIntro": "Ông/Bà .................... đã tiến hành hoàn trả tài sản cho ông/bà....................tại văn phòng công ty DYM Việt Nam theo bảng thống kê chi tiết sau:"
+    "returnIntro": "Ông/Bà .................... đã tiến hành hoàn trả tài sản cho ông/bà....................tại văn phòng công ty theo bảng thống kê chi tiết sau:"
   },
   "auth": {
     "login": {
@@ -103,7 +103,7 @@
     },
     "loginWithGoogle": {
       "loginButton": "Đăng nhập với Google",
-      "companyEmailOnly": "Chỉ sử dụng email của công ty DYM",
+      "companyEmailOnly": "Chỉ sử dụng email của công ty ERP",
       "popupBlocked": "Trình duyệt đã chặn cửa sổ popup. Vui lòng cho phép popup cho trang này.",
       "authUrlFailed": "Không lấy được URL đăng nhập",
       "profileLoadFailed": "Không tải được hồ sơ người dùng sau khi đăng nhập Google",
@@ -151,7 +151,7 @@
       "backToDashboard": "Quay lại trang chủ",
       "contact": "Liên hệ",
       "terms": "Điều khoản sử dụng",
-      "copyright": "©2021-2024 DYM Co., Ltd. Bảo lưu mọi quyền"
+      "copyright": "©2021-2024 Your Company Bảo lưu mọi quyền"
     },
     "unauthorized": {
       "title": "Không có quyền truy cập",
@@ -291,7 +291,7 @@
       "afternoon": "Chào buổi chiều",
       "evening": "Chào buổi tối",
       "night": "Chúc ngủ ngon",
-      "subtitle": "Hệ thống quản lý tài sản nội bộ DYM",
+      "subtitle": "Hệ thống quản lý tài sản nội bộ",
       "user": "Người dùng",
       "superadmin": "Superadmin",
       "rolesAssigned": "Đã gán vai trò",

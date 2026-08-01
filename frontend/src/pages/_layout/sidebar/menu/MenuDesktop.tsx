@@ -4,7 +4,6 @@ import {
   appRoutes
 } from "@/shared/constants/routes.constant.ts";
 import { useNavigate } from "react-router-dom";
-import LogoLight from "@/assets/images/logo-light-temp.png";
 import SidebarMenu from "./index";
 import { useTranslation } from "react-i18next";
 
@@ -43,11 +42,9 @@ const MenuDesktop = ({ className }: SidebarProps) => {
             onClick={() => handleMenuClick(appRoutes[AppRouteNames.HOME])}
             className="w-full cursor-pointer hidden md:block"
           >
-            <img
-              src={LogoLight}
-              alt="DYM VietNam Logo"
-              className="h-auto w-full"
-            />
+            <span className="block text-white text-2xl font-extrabold py-3">
+              ERP
+            </span>
           </a>
         </div>
         <nav className="flex-1 sidebar-scroll overflow-y-auto px-9 -mx-px">

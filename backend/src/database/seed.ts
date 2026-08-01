@@ -209,7 +209,7 @@ async function seedAdminUser(
   roleMap: Map<string, Types.ObjectId>,
 ): Promise<Types.ObjectId | null> {
   const adminEmail =
-    process.env.ADMIN_EMAIL || 'admin@dymvietnam.net';
+    process.env.ADMIN_EMAIL || 'admin@example.com';
 
   const existing = await UserModel.findOne({ email: adminEmail }).lean();
   if (existing) {
@@ -223,7 +223,12 @@ async function seedAdminUser(
     return null;
   }
 
-  const rawPassword = process.env.ADMIN_PASSWORD || 'Admin@123456';
+  const rawPassword = process.env.ADMIN_PASSWORD;
+  if (!rawPassword) {
+    throw new Error(
+      'ADMIN_PASSWORD env var is required to seed the admin user',
+    );
+  }
 
   const admin = await UserModel.create({
     name: 'System Admin',
@@ -246,7 +251,7 @@ async function seedAdminAccount(
   if (!adminUserId) return;
 
   const adminEmail =
-    process.env.ADMIN_EMAIL || 'admin@dymvietnam.net';
+    process.env.ADMIN_EMAIL || 'admin@example.com';
 
   const existing = await AccountModel.findOne({
     userId: adminUserId,

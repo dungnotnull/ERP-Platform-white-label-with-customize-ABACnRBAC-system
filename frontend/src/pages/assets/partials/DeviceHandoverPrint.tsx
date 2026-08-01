@@ -1,18 +1,8 @@
-import type { CSSProperties } from "react";
 import { Button } from "@/components/ui/Button";
 import { useTranslation } from "react-i18next";
 import { DEVICE_HANDOVER_PRINT_VI as vi } from "./deviceHandoverPrint.vi";
 
 const DOCUMENT_FONT_FAMILY = '"Times New Roman", Times, serif';
-const DOCUMENT_LOGO_STYLE: CSSProperties = {
-  width: "110px",
-  height: "auto",
-  objectFit: "contain",
-  display: "block",
-  opacity: 0.45,
-  filter: "blur(0.6px)"
-};
-
 interface DeviceManufacturer {
   id: string;
   name: string;
@@ -212,14 +202,6 @@ export default function DeviceHandoverPrint({
           className="p-6 border rounded-md bg-white"
           style={{ fontFamily: DOCUMENT_FONT_FAMILY }}
         >
-          <div style={{ marginBottom: "10px", textAlign: "left" }}>
-            <img
-              src="/images/login/logo.png"
-              alt="DYM Company"
-              style={DOCUMENT_LOGO_STYLE}
-            />
-          </div>
-
           <div
             style={{
               display: "flex",

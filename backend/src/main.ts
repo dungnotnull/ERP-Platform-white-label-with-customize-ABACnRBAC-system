@@ -90,7 +90,7 @@ async function bootstrap() {
   app.use(requestLoggingMiddleware.use.bind(requestLoggingMiddleware));
 
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('DYM Management API')
+    .setTitle('ERP Platform API')
     .setDescription('Unified management system API')
     .setVersion('1.0')
     .addBearerAuth()

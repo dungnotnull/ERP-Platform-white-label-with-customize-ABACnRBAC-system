@@ -67,8 +67,13 @@ async function seedDefaultRoles(model: Model<Role>): Promise<void> {
 }
 
 async function seedSuperadmin(model: Model<User>): Promise<void> {
-  const superadminEmail = process.env.SUPERADMIN_EMAIL || 'superadmin@system.com';
-  const superadminPassword = process.env.SUPERADMIN_PASSWORD || 'changeme123';
+  const superadminEmail = process.env.SUPERADMIN_EMAIL || 'superadmin@example.com';
+  const superadminPassword = process.env.SUPERADMIN_PASSWORD;
+  if (!superadminPassword) {
+    throw new Error(
+      'SUPERADMIN_PASSWORD env var is required to seed the superadmin',
+    );
+  }
 
   const exists = await model.findOne({ isSuperadmin: true });
   if (exists) return;

@@ -35,10 +35,10 @@ describe('GetActivityLogsUseCase', () => {
     await useCase.execute({
       page: 1,
       limit: 10,
-      search: 'admin@dym.com',
+      search: 'admin@example.com',
       action: 'CREATE',
       method: 'POST',
-      userEmail: 'admin@dym.com',
+      userEmail: 'admin@example.com',
       startDate: '2026-01-01',
       endDate: '2026-12-31',
       statusCode: 201,
@@ -50,10 +50,10 @@ describe('GetActivityLogsUseCase', () => {
       expect.objectContaining({
         page: 1,
         limit: 10,
-        search: 'admin@dym.com',
+        search: 'admin@example.com',
         action: 'CREATE',
         method: 'POST',
-        userEmail: 'admin@dym.com',
+        userEmail: 'admin@example.com',
         startDate: '2026-01-01',
         endDate: '2026-12-31',
         statusCode: 201,
@@ -66,7 +66,7 @@ describe('GetActivityLogsUseCase', () => {
   it('maps entity properties to output DTO', async () => {
     const entity = ActivityLogEntity.create({
       userId: 'user-1',
-      userEmail: 'test@dym.com',
+      userEmail: 'test@example.com',
       userName: 'Test User',
       isSuperadmin: false,
       action: 'DELETE' as any,
@@ -92,7 +92,7 @@ describe('GetActivityLogsUseCase', () => {
     expect(result.items).toHaveLength(1);
     expect(result.items[0]).toMatchObject({
       userId: 'user-1',
-      userEmail: 'test@dym.com',
+      userEmail: 'test@example.com',
       userName: 'Test User',
       isSuperadmin: false,
       action: 'DELETE',

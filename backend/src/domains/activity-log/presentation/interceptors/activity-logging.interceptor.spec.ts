@@ -79,7 +79,7 @@ describe('ActivityLoggingInterceptor', () => {
   it('logs POST requests as CREATE action', async () => {
     const ctx = mockExecutionContext('POST', '/api/v1/devices', {
       userId: 'u1',
-      email: 'admin@dym.com',
+      email: 'admin@example.com',
       name: 'Admin',
       isSuperadmin: true,
     }, { name: 'New Device', type: 'Laptop' });
@@ -95,7 +95,7 @@ describe('ActivityLoggingInterceptor', () => {
     expect(mockBuffer.push).toHaveBeenCalledWith(
       expect.objectContaining({
         userId: 'u1',
-        userEmail: 'admin@dym.com',
+        userEmail: 'admin@example.com',
         userName: 'Admin',
         isSuperadmin: true,
         action: 'CREATE',
@@ -168,7 +168,7 @@ describe('ActivityLoggingInterceptor', () => {
 
   it('logs login POST requests as LOGIN action', async () => {
     const ctx = mockExecutionContext('POST', '/api/v1/auth/login', null, {
-      email: 'user@dym.com',
+      email: 'user@example.com',
     });
     const handler = { handle: () => of({ accessToken: '...' }) };
 
@@ -182,14 +182,14 @@ describe('ActivityLoggingInterceptor', () => {
     expect(mockBuffer.push).toHaveBeenCalledWith(
       expect.objectContaining({
         action: 'LOGIN',
-        userEmail: 'user@dym.com',
+        userEmail: 'user@example.com',
       }),
     );
   });
 
   it('logs register POST requests as REGISTER action', async () => {
     const ctx = mockExecutionContext('POST', '/api/v1/auth/register', null, {
-      email: 'new@dym.com',
+      email: 'new@example.com',
     });
     const handler = { handle: () => of({ id: 'new-user' }) };
 
@@ -203,7 +203,7 @@ describe('ActivityLoggingInterceptor', () => {
     expect(mockBuffer.push).toHaveBeenCalledWith(
       expect.objectContaining({
         action: 'REGISTER',
-        userEmail: 'new@dym.com',
+        userEmail: 'new@example.com',
       }),
     );
   });
@@ -285,7 +285,7 @@ describe('ActivityLoggingInterceptor', () => {
 
   it('strips sensitive fields from request body', async () => {
     const ctx = mockExecutionContext('POST', '/api/v1/auth/login', null, {
-      email: 'user@dym.com',
+      email: 'user@example.com',
       password: 'secret123',
       refreshToken: 'rt-abc',
       name: 'User',
@@ -300,7 +300,7 @@ describe('ActivityLoggingInterceptor', () => {
 
     await new Promise((r) => setTimeout(r, 50));
     const log = mockBuffer.push.mock.calls[0][0];
-    expect(log.requestBody).toEqual({ email: 'user@dym.com', name: 'User' });
+    expect(log.requestBody).toEqual({ email: 'user@example.com', name: 'User' });
   });
 
   it('caps request body to 20 keys', async () => {
@@ -310,7 +310,7 @@ describe('ActivityLoggingInterceptor', () => {
     }
     const ctx = mockExecutionContext('POST', '/api/v1/devices', {
       userId: 'u1',
-      email: 'admin@dym.com',
+      email: 'admin@example.com',
       isSuperadmin: false,
     }, body);
     const handler = { handle: () => of({}) };
@@ -329,7 +329,7 @@ describe('ActivityLoggingInterceptor', () => {
   it('sets requestBody to null when body is empty', async () => {
     const ctx = mockExecutionContext('DELETE', '/api/v1/devices/abc', {
       userId: 'u1',
-      email: 'admin@dym.com',
+      email: 'admin@example.com',
     });
     const handler = { handle: () => of(null) };
 
@@ -347,7 +347,7 @@ describe('ActivityLoggingInterceptor', () => {
   it('captures isSuperadmin from user', async () => {
     const ctx = mockExecutionContext('POST', '/api/v1/devices', {
       userId: 'u1',
-      email: 'admin@dym.com',
+      email: 'admin@example.com',
       isSuperadmin: true,
     });
     const handler = { handle: () => of({}) };
@@ -365,7 +365,7 @@ describe('ActivityLoggingInterceptor', () => {
 
   it('captures userEmail from Google OAuth profile on callback', async () => {
     const ctx = mockExecutionContext('GET', '/api/v1/auth/google/callback', {
-      email: 'user@dymvietnam.net',
+      email: 'user@example.com',
       name: 'Google User',
       profilePicture: 'https://photo.url',
       provider: 'GOOGLE',
@@ -383,7 +383,7 @@ describe('ActivityLoggingInterceptor', () => {
     expect(mockBuffer.push).toHaveBeenCalledWith(
       expect.objectContaining({
         action: 'LOGIN',
-        userEmail: 'user@dymvietnam.net',
+        userEmail: 'user@example.com',
         userName: 'Google User',
         method: 'GOOGLE',
         endpoint: 'Google Login',

@@ -1,6 +1,6 @@
 # Technical Flow
 
-How an incoming HTTP request traverses the DYM Management API from arrival to response.
+How an incoming HTTP request traverses the ERP Platform API from arrival to response.
 
 ---
 

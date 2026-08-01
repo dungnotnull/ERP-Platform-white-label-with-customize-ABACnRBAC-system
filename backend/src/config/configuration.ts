@@ -4,7 +4,7 @@ export const configuration = () => ({
   apiPrefix: process.env.API_PREFIX || 'api',
   mongodb: {
     uri: process.env.MONGODB_URI || '',
-    dbName: process.env.DB_NAME || 'dym_management',
+    dbName: process.env.DB_NAME || 'erp_platform',
   },
   jwt: {
     accessSecret: process.env.JWT_ACCESS_SECRET || '',
@@ -21,7 +21,7 @@ export const configuration = () => ({
   corsOrigins: process.env.CORS_ORIGINS || '',
   mongodbLogSystem: {
     uri: process.env.MONGODB_URI_FOR_LOG_SYSTEM || '',
-    dbName: process.env.DB_NAME_LOG_SYS || 'log_system_dym_management',
+    dbName: process.env.DB_NAME_LOG_SYS || 'log_system_erp_platform',
   },
   redis: {
     host: process.env.REDIS_HOST || '',

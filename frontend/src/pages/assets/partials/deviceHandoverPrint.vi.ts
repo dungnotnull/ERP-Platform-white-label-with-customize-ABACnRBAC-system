@@ -1,7 +1,7 @@
 export const DEVICE_HANDOVER_PRINT_VI = {
-  companyName: "CÔNG TY TNHH DYM VIETNAM",
-  handoverDocNo: "Số: ..... -DYMVN/BBBGTS",
-  returnDocNo: "Số: ..... -DYMVN/BBHTTS",
+  companyName: "YOUR COMPANY LLC",
+  handoverDocNo: "Số: ..... -ERP/BBBGTS",
+  returnDocNo: "Số: ..... -ERP/BBHTTS",
   nationalMotto: "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM",
   independence: "Độc lập - Tự do - Hạnh phúc",
   dateLine: "TP Hồ Chí Minh, ngày ..... tháng ..... năm ..........",
@@ -16,9 +16,9 @@ export const DEVICE_HANDOVER_PRINT_VI = {
   nameLinePlaceholder: "...",
   departmentPlaceholder: "...",
   handoverIntro:
-    "Bên Giao đã tiến hành bàn giao tài sản cho bên Nhận tại văn phòng công ty DYM Việt Nam theo bảng thống kê chi tiết sau:",
+    "Bên Giao đã tiến hành bàn giao tài sản cho bên Nhận tại văn phòng công ty theo bảng thống kê chi tiết sau:",
   returnIntro:
-    "Ông/Bà ............................. đã tiến hành hoàn trả tài sản cho ông/bà ............................. tại văn phòng công ty DYM Việt Nam theo bảng thống kê chi tiết sau:",
+    "Ông/Bà ............................. đã tiến hành hoàn trả tài sản cho ông/bà ............................. tại văn phòng công ty theo bảng thống kê chi tiết sau:",
   handoverCommitment:
     "Bên Giao cam đoan rằng toàn bộ tài sản đã được bàn giao đầy đủ, đúng số lượng, chất lượng. Kể từ ngày .../.../..... số tài sản trên sẽ do bên Nhận chịu trách nhiệm quản lý.",
   returnCommitment:

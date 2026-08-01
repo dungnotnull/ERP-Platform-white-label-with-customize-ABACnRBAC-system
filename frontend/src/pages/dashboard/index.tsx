@@ -15,9 +15,7 @@ import {
   Fingerprint
 } from "lucide-react";
 import { LoadingOverlay } from "@/components/common/LoadingSpinner";
-import WeatherSection from "@/components/creative/WeatherUtil";
 import i18n from "@/lib/i18n/i18n";
-import AgentHotspotWrapper from "@/components/creative/agentspot/AgentHotspotWrapper";
 
 function getGreeting(): string {
   const hour = getHours(new Date());
@@ -339,18 +337,6 @@ export default function Home() {
               )}
             </div>
           </div>
-        </div>
-
-        <div className="mb-6">
-          <AgentHotspotWrapper />
-        </div>
-
-        <div className="mb-14 mt-10">
-          <div className="text-xl md:text-2xl font-extrabold text-blue-800 leading-tight tracking-tight mb-4">
-            {t("dashboard.home.relaxTitle")}
-          </div>
-          <WeatherSection />
-          {/* <WorldNewsSection/> */}
         </div>
 
         {/* <div className="cva mb-6">

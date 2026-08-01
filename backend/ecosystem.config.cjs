@@ -9,7 +9,7 @@
 module.exports = {
   apps: [
     {
-      name: 'system-orchestration-api',
+      name: 'erp-platform-api',
       cwd: __dirname,
       script: './dist/src/main.js',
       instances: 1,

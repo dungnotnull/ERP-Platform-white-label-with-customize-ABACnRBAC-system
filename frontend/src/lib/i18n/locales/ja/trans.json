@@ -1,7 +1,7 @@
 {
   "footer": {
-    "copyright": "DYM VietNam {{year}}",
-    "createdBy": "IT DYM VietNamが作成"
+    "copyright": "ERP Platform {{year}}",
+    "createdBy": "IT Teamが作成"
   },
   "common": {
     "handling": "処理中",
@@ -65,9 +65,9 @@
     "today": "今日",
     "successTotal": "成功合計",
     "skipped": "スキップ済み",
-    "CTYTNHH DYM VIETNAM": "CÔNG TY TNHH DYM VIETNAM",
-    "DYMVN/BBBGTS": "Số: ...-DYMVN/BBBGTS",
-    "DYMVN/BBTHTS": "Số: ...-DYMVN/BBHTTS",
+    "YOUR COMPANY LLC": "YOUR COMPANY LLC",
+    "ERP/BBBGTS": "Số: ...-ERP/BBBGTS",
+    "ERP/BBTHTS": "Số: ...-ERP/BBHTTS",
     "CHXHCN VIET NAM": "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM",
     "doclap": "Độc lập - Tự do - Hạnh phúc",
     "tphcmngay": "TP Hồ Chí Minh, ngày ..... tháng ..... năm ..........",
@@ -76,14 +76,14 @@
     "mr/mss": "氏/氏名",
     "department": "部門",
     "position": "役割",
-    "handoverIntro": "Bên Giao đã tiến hành bàn giao tài sản cho bên Nhận tại văn phòng công ty DYM Việt Nam theo bảng thống kê chi tiết sau:",
+    "handoverIntro": "Bên Giao đã tiến hành bàn giao tài sản cho bên Nhận tại văn phòng công ty theo bảng thống kê chi tiết sau:",
     "handoverCommitment": "Bên Giao cam đoan rằng toàn bộ tài sản đã được bàn giao đầy đủ, đúng số lượng, chất lượng. Kể từ ngày .../.../..... số tài sản trên sẽ do bên Nhận chịu trách nhiệm quản lý.",
     "fieldPlaceholder": "...",
     "nameLinePlaceholder": "....................",
     "departmentPlaceholder": "..",
     "returnCommitment": "引き渡し当事者は、すべての資産が数量・品質ともに完全に返却されたことを保証します。.../.../..... 以降、上記資産の管理責任は受領当事者にあります。",
     "commitmentCopies": "本記録は2部作成し、各当事者が1部ずつ保管します。",
-    "returnIntro": "Ông/Bà .................... đã tiến hành hoàn trả tài sản cho ông/bà....................tại văn phòng công ty DYM Việt Nam theo bảng thống kê chi tiết sau:"
+    "returnIntro": "Ông/Bà .................... đã tiến hành hoàn trả tài sản cho ông/bà....................tại văn phòng công ty theo bảng thống kê chi tiết sau:"
   },
   "auth": {
     "login": {
@@ -102,7 +102,7 @@
     },
     "loginWithGoogle": {
       "loginButton": "Googleでログイン",
-      "companyEmailOnly": "DYM社のメールアドレスのみご利用ください",
+      "companyEmailOnly": "ERPのメールアドレスのみご利用ください",
       "popupBlocked": "ブラウザがポップアップをブロックしました。このサイトのポップアップを許可してください。",
       "authUrlFailed": "認証URLを取得できませんでした",
       "profileLoadFailed": "Googleログイン後にユーザープロファイルを読み込めませんでした",
@@ -150,7 +150,7 @@
       "backToDashboard": "ダッシュボードに戻る",
       "contact": "お問い合わせ",
       "terms": "法人利用規約",
-      "copyright": "©2021-2024 DYM Co., Ltd. All rights reserved"
+      "copyright": "©2021-2024 Your Company All rights reserved"
     },
     "unauthorized": {
       "title": "アクセス権限がありません",
@@ -421,7 +421,7 @@
       "afternoon": "こんにちは",
       "evening": "こんばんは",
       "night": "おやすみなさい",
-      "subtitle": "DYM社内資産管理システム",
+      "subtitle": "社内資産管理システム",
       "user": "ユーザー",
       "superadmin": "スーパー管理者",
       "rolesAssigned": "ロール割り当て済み",

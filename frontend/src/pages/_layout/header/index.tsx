@@ -8,7 +8,6 @@ import { useAuth } from "@/context/AuthContext";
 import { useUserProfile } from "@/shared/hooks/useUserProfile.ts";
 import LanguageSelector from "@/components/patterns/LanguageSelector.tsx";
 import { cn } from "@/lib/utils";
-import LogoLightTemp from "@/assets/images/logo-light-temp.png";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -25,11 +24,7 @@ const Header = ({ className }: HeaderProps) => {
     <header className={cn("header h-16 min-h-[64px] max-h-[64px]", className)}>
       <div className="flex flex-1 items-center justify-between md:justify-end p-4 md:p-2 md:pr-[60px] md:gap-4">
         <Link to="/" className="block md:hidden">
-          <img
-            src={LogoLightTemp}
-            alt="DYM VietNam Logo"
-            className="h-[32px] w-auto"
-          />
+          <span className="text-lg font-bold text-primary">ERP</span>
         </Link>
         <LanguageSelector labelShowType="nativeName" />
         <Popover>
@@ -56,7 +51,7 @@ const Header = ({ className }: HeaderProps) => {
                 </Avatar>
                 <div className="flex flex-col gap-1">
                   <span className="font-bold text-xl text-primary">
-                    DYM VIETNAM
+                    ERP Platform
                   </span>
                   <span className="text-sm text-popover">
                     {t("auth.personal")}

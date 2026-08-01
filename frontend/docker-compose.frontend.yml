@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: i-asm-fe
+    ports:
+      - "3002:3002"
+    restart: always

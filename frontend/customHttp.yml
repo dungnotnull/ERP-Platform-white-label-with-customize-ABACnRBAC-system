@@ -1,0 +1,6 @@
+# Amplify Custom Headers — for Google OAuth popup (window.closed / opener)
+customHeaders:
+  - pattern: "**/*"
+    headers:
+      - key: "Cross-Origin-Opener-Policy"
+        value: "same-origin-allow-popups"

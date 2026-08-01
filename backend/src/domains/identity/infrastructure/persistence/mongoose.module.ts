@@ -1,0 +1,102 @@
+import { Module } from '@nestjs/common';
+import { DiscoveryModule } from '@nestjs/core';
+import { MongooseModule } from '@nestjs/mongoose';
+import {
+  User,
+  UserSchema,
+  Account,
+  AccountSchema,
+  Role,
+  RoleSchema,
+  Permission,
+  PermissionSchema,
+  EndpointPermission,
+  EndpointPermissionSchema,
+  ApiEndpoint,
+  ApiEndpointSchema,
+  AllowedOrigin,
+  AllowedOriginSchema,
+  SystemCounter,
+  SystemCounterSchema,
+  ModuleEntity,
+  ModuleEntitySchema,
+  AbacPolicy,
+  AbacPolicySchema,
+} from './schemas';
+import {
+  UserRepository,
+  AccountRepository,
+  RoleRepository,
+  PermissionRepository,
+  EndpointPermissionRepository,
+  ApiEndpointRepository,
+  AllowedOriginRepository,
+} from './repositories';
+import { BitmapComputationService } from '@/domains/identity/application/services/bitmap-computation.service';
+import { RouteMapService } from '@/domains/identity/application/services/route-map.service';
+import { RouteDiscoveryService } from '@/domains/identity/application/services/route-discovery.service';
+import { AbacRuleEngineService } from '@/domains/identity/application/services/abac-rule-engine.service';
+
+@Module({
+  imports: [
+    MongooseModule.forFeature([
+      { name: User.name, schema: UserSchema },
+      { name: Account.name, schema: AccountSchema },
+      { name: Role.name, schema: RoleSchema },
+      { name: Permission.name, schema: PermissionSchema },
+      { name: EndpointPermission.name, schema: EndpointPermissionSchema },
+      { name: ApiEndpoint.name, schema: ApiEndpointSchema },
+      { name: AllowedOrigin.name, schema: AllowedOriginSchema },
+      { name: SystemCounter.name, schema: SystemCounterSchema },
+      { name: ModuleEntity.name, schema: ModuleEntitySchema },
+      { name: AbacPolicy.name, schema: AbacPolicySchema },
+    ]),
+    DiscoveryModule,
+  ],
+  providers: [
+    { provide: 'UserRepositoryPort', useClass: UserRepository },
+    { provide: 'AccountRepositoryPort', useClass: AccountRepository },
+    { provide: 'RoleRepositoryPort', useClass: RoleRepository },
+    { provide: 'PermissionRepositoryPort', useClass: PermissionRepository },
+    { provide: 'EndpointPermissionRepositoryPort', useClass: EndpointPermissionRepository },
+    { provide: 'ApiEndpointRepositoryPort', useClass: ApiEndpointRepository },
+    { provide: 'AllowedOriginRepositoryPort', useClass: AllowedOriginRepository },
+    UserRepository,
+    AccountRepository,
+    RoleRepository,
+    PermissionRepository,
+    EndpointPermissionRepository,
+    ApiEndpointRepository,
+    AllowedOriginRepository,
+    BitmapComputationService,
+    { provide: 'BitmapComputationService', useExisting: BitmapComputationService },
+    { provide: 'IBitmapComputationService', useExisting: BitmapComputationService },
+    RouteMapService,
+    RouteDiscoveryService,
+    AbacRuleEngineService,
+  ],
+  exports: [
+    'UserRepositoryPort',
+    'AccountRepositoryPort',
+    'RoleRepositoryPort',
+    'PermissionRepositoryPort',
+    'EndpointPermissionRepositoryPort',
+    'ApiEndpointRepositoryPort',
+    'AllowedOriginRepositoryPort',
+    UserRepository,
+    AccountRepository,
+    RoleRepository,
+    PermissionRepository,
+    EndpointPermissionRepository,
+    ApiEndpointRepository,
+    AllowedOriginRepository,
+    BitmapComputationService,
+    'BitmapComputationService',
+    'IBitmapComputationService',
+    RouteMapService,
+    RouteDiscoveryService,
+    AbacRuleEngineService,
+    MongooseModule,
+  ],
+})
+export class IdentityMongooseModule {}

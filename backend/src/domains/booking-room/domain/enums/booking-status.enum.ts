@@ -1,0 +1,5 @@
+export enum BookingStatus {
+  SCHEDULED = 'SCHEDULED',
+  CANCELLED = 'CANCELLED',
+  COMPLETED = 'COMPLETED',
+}

@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: #475569;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: #172554;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent-hover: rgb(37, 99, 235);
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+
+  --radius: 0.5rem;
+
+  --shadow-neo-sm:
+    2px 2px 4px rgba(0, 0, 0, 0.06), -2px -2px 4px rgba(255, 255, 255, 0.8);
+  --shadow-neo-md:
+    4px 4px 8px rgba(0, 0, 0, 0.06), -4px -4px 8px rgba(255, 255, 255, 0.8);
+  --shadow-neo-lg:
+    6px 6px 12px rgba(0, 0, 0, 0.06), -6px -6px 12px rgba(255, 255, 255, 0.8);
+  --shadow-neo-inset:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.06),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+@layer base {
+  html {
+    @apply font-noto text-primary-black scroll-smooth;
+  }
+}
+
+@layer components {
+  .before-gradient-white {
+    @apply relative before:content-[''] before:absolute before:top-0 before:right-0 before:bottom-0 before:w-16 before:bg-gradient-to-r before:from-white/0 before:to-white;
+  }
+
+  .neumorphic-table-wrapper {
+    @apply overflow-x-auto rounded-3xl border border-slate-200/80 bg-white/85;
+    box-shadow: var(--shadow-neo-md);
+  }
+
+  .neumorphic-card {
+    @apply rounded-3xl border border-slate-200/80 bg-white/95 p-4;
+    box-shadow: var(--shadow-neo-md);
+  }
+
+  .neumorphic-dropdown {
+    @apply rounded-2xl border border-slate-200/80 bg-white/95;
+    box-shadow: var(--shadow-neo-md);
+  }
+
+  .neumorphic-table {
+    @apply min-w-full w-full border-separate border-spacing-0 bg-transparent;
+  }
+
+  .neumorphic-table th,
+  .neumorphic-table td {
+    @apply px-4 py-4 align-middle text-left;
+  }
+
+  .neumorphic-table thead th {
+    @apply bg-slate-100/90 text-slate-700 text-sm font-semibold;
+  }
+
+  .neumorphic-table tbody tr {
+    @apply border-b border-slate-200/80 transition-colors duration-200;
+  }
+
+  .neumorphic-table tbody tr:hover {
+    @apply bg-slate-50/90;
+  }
+
+  .neumorphic-table tbody tr:last-child {
+    @apply border-b-0;
+  }
+
+  .neumorphic-table tbody td {
+    @apply bg-white/90;
+  }
+
+  .neumorphic-table tbody tr:hover td {
+    @apply bg-slate-50/90;
+  }
+
+  .neumorphic-table caption {
+    @apply text-sm text-slate-500 mt-3;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 #f8fafc;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: #f8fafc;
+    border-radius: 20px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 20px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+  }
+
+  .thin-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #475569;
+  }
+
+  .scrollbar-horizontal {
+    overflow-x: scroll !important;
+    overflow-y: visible;
+    scrollbar-width: auto;
+    -ms-overflow-style: auto;
+  }
+
+  .scrollbar-horizontal::-webkit-scrollbar {
+    width: auto;
+    height: 8px;
+  }
+
+  .scrollbar-horizontal::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 4px;
+  }
+
+  .scrollbar-horizontal::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .scrollbar-horizontal::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  .sticky-scrollbar-container {
+    position: relative;
+  }
+
+  .sticky-scrollbar {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+  }
+}
+
+/* AgentHotspot css */
+.sv-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.sv-cover,
+.sv-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.sv-visible { opacity: 1; pointer-events: auto; }
+.sv-hidden  { opacity: 0; pointer-events: none; }
+
+.sv-hotspot-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.sv-hotspot {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 0px 24px;
+  gap: 12px;
+}
+
+.app-player {
+  width: 100%;
+  max-width: 960px;
+}
+
+
+@media (max-width: 640px) {
+  .app-shell {
+    min-height: 40vh;
+    padding: 0px 16px;
+  }
+}
